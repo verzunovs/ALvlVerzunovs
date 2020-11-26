@@ -18,14 +18,26 @@ namespace Hw1M2
         }
         public enum TypeOfLogMessage
         {
-            Info,
-            Warning,
-            Eror=404
+            Info = 1,
+            Warning = 2,
+            Error = 404
         }
 
-        public void CreateNewLog(TypeOfLogMessage typeOfTheLog, string message)
+        public void CreateNewLog(int logMessage, string message)
         {
-            log.Append($"{typeOfTheLog}:{message}.\n");
+            switch (logMessage)
+            {
+                case (int)TypeOfLogMessage.Info:
+                    log.Append($"{TypeOfLogMessage.Info}:{message}.\n");
+                    break;
+                case (int)TypeOfLogMessage.Warning:
+                    log.Append($"{TypeOfLogMessage.Warning}:{message}.\n");
+                    break;
+                case (int)TypeOfLogMessage.Error:
+                    log.Append($"{TypeOfLogMessage.Error}:{message}.\n");
+                    break;
+            }
+
             Console.Write(log);
         }
     }
