@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hw1M2
 {
@@ -36,6 +32,7 @@ namespace Hw1M2
                     createLog.CreateNewLog(404, $"Action failed by reason:{e.StackTrace}");
                 }
             }
+                    createLog.WriteToFile();
         }
     }
 }

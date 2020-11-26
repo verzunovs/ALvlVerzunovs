@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 namespace Hw1M2
 {
@@ -41,8 +38,11 @@ namespace Hw1M2
                     logList.Append(log);
                     break;
             }
-
             Console.Write(log);
         }
-    }
+        public void WriteToFile()
+        {
+            File.WriteAllText("output.txt",logList.ToString());
+        }  
+        }
 }

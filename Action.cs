@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hw1M2
 {
@@ -21,9 +17,11 @@ namespace Hw1M2
         {
             int a = 10;
             const string message = "I broke a toilet";
+            Random rndError = new Random();
+            int div = rndError.Next(0, 2);
             try
             {
-                a = a/0;
+                a = a/div;
                 throw new Exception(message);
             }
             finally
