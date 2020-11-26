@@ -9,7 +9,7 @@ namespace Hw1M2
     class Logger
     {
         private static Logger instance;
-        StringBuilder log = new StringBuilder();
+        StringBuilder logList = new StringBuilder();
         private Logger() { }
         public static Logger GetInstance()
         {
@@ -25,16 +25,20 @@ namespace Hw1M2
 
         public void CreateNewLog(int logMessage, string message)
         {
+            StringBuilder log = new StringBuilder();
             switch (logMessage)
             {
                 case (int)TypeOfLogMessage.Info:
                     log.Append($"{TypeOfLogMessage.Info}:{message}.\n");
+                    logList.Append(log);
                     break;
                 case (int)TypeOfLogMessage.Warning:
                     log.Append($"{TypeOfLogMessage.Warning}:{message}.\n");
+                    logList.Append(log);
                     break;
                 case (int)TypeOfLogMessage.Error:
                     log.Append($"{TypeOfLogMessage.Error}:{message}.\n");
+                    logList.Append(log);
                     break;
             }
 

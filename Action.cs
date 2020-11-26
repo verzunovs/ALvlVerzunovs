@@ -19,13 +19,14 @@ namespace Hw1M2
         }
         public void Act3()
         {
+            int a = 10;
             const string message = "I broke a toilet";
             try
             {
-                
+                a = a/0;
                 throw new Exception(message);
             }
-            catch (Exception e)
+            finally
             {
 
             }
