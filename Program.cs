@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hw1M2
 {
@@ -10,6 +6,9 @@ namespace Hw1M2
     {
         static void Main(string[] args)
         {
+            Starter start = new Starter();
+            start.Run();
+            Console.ReadKey();
         }
     }
 }
